@@ -1,0 +1,46 @@
+head {
+  color: white;
+  font-family: arial sans-serif;
+  background-color: green;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#main-form {
+
+}
+
+#bigbox {
+  background-color: #B0B0B0;
+}
+
+.flex-container-1 {
+
+}
+
+.flex-item {
+  background-color: #F0F0F0;
+  color: black;
+  border: 1px solid black;
+  font-size: 14px;
+}
+
+.body-box {
+  background-color: white;
+}
+
+.request-button {
+  color: black;
+  font-size: 14px;
+  background-color: #609732;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.response-button {
+  color: black;
+  font-size: 14px;
+  background-color: #29506D;
+  border-radius: 3px;
+  font-weight: bold;
+}
