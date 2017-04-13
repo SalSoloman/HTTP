@@ -23,10 +23,10 @@ app.get('/', function(request, response) {
 
 
 app.get('/search', function(request, response){
-  if (request.query.q.length !== 0) {
+  if ('q' in request.query) {
     response.status(200)
     response.set("Content-Type", "text/plain")
-    response.send("doodads")
+    response.send(request.query.q)
   } else {
     response.status(400)
     response.set("Content-Type", "text/html")

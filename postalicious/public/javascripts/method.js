@@ -6,61 +6,49 @@ document.getElementById('main-form').addEventListener('submit', function(event){
 
   const method = document.querySelector('.method-input').value
   const host = document.querySelector('.host-input').value
-  const queryKey = document.querySelector('.Query-Keys').value
-  const queryValue = document.querySelector('.Query-Value').value
-  const headerKeys = document.querySelector('.Header-Keys').value
-  const headerValue = document.querySelector('.Header-Values').value
+  // const queryKey = document.querySelector('.Query-Keys').value
+  // const queryValue = document.querySelector('.Query-Value').value
+  // const headerKeys = document.querySelector('.Header-Keys').value
+  // const headerValue = document.querySelector('.Header-Values').value
+  // const responseContainer = document.querySelector('.response-container')
 
-  const requestSpec = {
-    method,
-    host,
-    queryKey,
-    queryValue,
-    headerKeys,
-    headerValue,
-  }
-  console.log('REQUEST SPECIFICATION', requestSpec)
-})
-
-  // fetch({
-  //   method: 'POST',
-  //   url: '/construct_request',
-  //   body: JSON.stringify(requestSpec),
-  // })
-  //   .then(function(response) {
-  //     return response.json()
-  //   })
-  //   .then(function(response) {
-  //     console.log(response)
-  //     return responseContainer.innerText = JSON.stringify(response)
-  //   })
-  //   .catch(function(error) {
-  //     return responseContainer.innerText = JSON.stringify(error)
-  //   })
-  // }
-
-
+  fetch('/request', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      method,
+      host,
+    })
+  })
+  .then(response => {
+    console.log(response)
+    return response.json()
+  })
+  .then(responsePayload => {
+    console.log(responsePayload)
+  })
 
 //
-// function fetchMethod() {
-//   const method = document.querySelector('.method-input').value
-//   const host = document.getElementById('host').value
-//   const requestContainer = document.querySelector('.request-box')
-//   const responseContainer = document.querySelector('.response-box')
-// }
-//
-//
-// const headers = new Headers({
-//   "Content-Type": "application/json"
-// })
-//
-// const options = {
-//   method: 'POST',
-//   headers,
-//   body: JSON.stringify({
+// let request = new Request('http://localhost3001', {
 //     method,
-//     host
+//     host,
+//     queryKey,
+//     queryValue,
+//     headerKeys,
+//     headerValue,
 //   })
-// }
-//
-//
+//   fetch(request)
+//   .then(function(response) {
+//     return response.json()
+//   })
+//   .then(function(response) {
+//     return responseContainer.innerText = JSON.stringify(response)
+//   })
+//   .catch(function(error) {
+//     return responseContainer.innerText = JSON.stringify(error)
+//   })
+//   // console.log('REQUEST SPECIFICATION', requestSpec)
+})

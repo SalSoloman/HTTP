@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/SalSoloman/HTTP#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "fetch": "^1.1.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.8.1"
   }
 }
