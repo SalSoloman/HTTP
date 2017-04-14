@@ -6,18 +6,11 @@ document.getElementById('main-form').addEventListener('submit', function(event){
 
   const method = document.querySelector('.method-input').value
   const host = document.querySelector('.host-input').value
-  const queryKey1 = document.querySelector('.Query-Keys1').value
-  const queryKey2 = document.querySelector('.Query-Keys2').value
-  const queryKey3 = document.querySelector('.Query-Keys3').value
-  const queryValue1 = document.querySelector('.Query-Value1').value
-  const queryValue2 = document.querySelector('.Query-Value2').value
-  const queryValue3 = document.querySelector('.Query-Value3').value
-  const headerKeys1 = document.querySelector('.Header-Keys1').value
-  const headerKeys2 = document.querySelector('.Header-Keys2').value
-  const headerKeys3 = document.querySelector('.Header-Keys3').value
-  const headerValue1 = document.querySelector('.Header-Values1').value
-  const headerValue2 = document.querySelector('.Header-Values2').value
-  const headerValue3 = document.querySelector('.Header-Values3').value
+  // const queryKey = document.querySelector('.Query-Keys').value
+  // const queryValue = document.querySelector('.Query-Value').value
+  // const headerKeys = document.querySelector('.Header-Keys').value
+  // const headerValue = document.querySelector('.Header-Values').value
+  // const responseContainer = document.querySelector('.response-container')
 
   fetch('/request', {
     method: 'POST',
@@ -38,20 +31,14 @@ document.getElementById('main-form').addEventListener('submit', function(event){
     console.log(responsePayload)
   })
 
-
-let request = new Request {
-      host,
-      queryKey,
-      queryValue,
-      headerKeys,
-      headerValue,
-}
-console.log(request)
-
-
-
 //
 // let request = new Request('http://localhost3001', {
+//     method,
+//     host,
+//     queryKey,
+//     queryValue,
+//     headerKeys,
+//     headerValue,
 //   })
 //   fetch(request)
 //   .then(function(response) {
