@@ -6,108 +6,112 @@
     <link rel="stylesheet" type ="text/css" href="/stylesheets/style.css">
   </head>
   <body>
+  <h1>Postalicious</h1>
 
   <form id="main-form">
-    <div id="bigbox">
-      <div class="flex-container-1">
-        <div class="flex-item">
-          <label for="basic-url">Method</label>
-          <input type="text" class="form-control method-input" name="method" aria-describedby="basic-addon3">
-        </div>
-        <div class="flex-item">
-          <label for="basid-url">Host</label>
-          <input type="text" class="form-control host-input" name="host" aria-describedby="basic-addon3" value="http://">
-        </div>
+    <div class="flex-container-1">
+      <label for="basic-url" class="basic-url">Method</label>
+      <div class="flex-item">
+        <input type="text" class="form-control method-input" name="method" aria-describedby="basic-addon3">
+      </div>
+      <label for="basid-url">Host</label>
+      <div class="flex-item">
+        <input type="text" class="form-control host-input" name="host" aria-describedby="basic-addon3" value="http://">
       </div>
     </div>
 
-    <label for="basic-url">Query Parameter</label>
     <div class="flex-container-2">
+      <label for="basic-url">Query Parameter</label>
       <div class="Query-Keys-Container">
         <div class="flex-item">
-          <input placeholder="Key" type="text" class="Query-Keys" aria-describedby="basic-addon3">
+          <input placeholder="Key1" type="text" class="Query-Keys1" aria-describedby="basic-addon3">
         </div>
         <div class="flex-item">
-          <input placeholder="Key" type="text" class="Query-Keys" aria-describedby="basic-addon3">
+          <input placeholder="Key2" type="text" class="Query-Keys2" aria-describedby="basic-addon3">
         </div>
         <div class="flex-item">
-          <input placeholder="Key" type="text" class="Query-Keys" aria-describedby="basic-addon3">
+          <input placeholder="Key3" type="text" class="Query-Keys3" aria-describedby="basic-addon3">
         </div>
       </div>
 
       <div class="Query-Value-Container">
         <div class="flex-item">
-          <input placeholder="Value" type="text" class="Query-Value" aria-describedby="basic-addon3">
+          <input placeholder="Value1" type="text" class="Query-Value1" aria-describedby="basic-addon3">
         </div>
         <div class="flex-item">
-          <input placeholder="Value" type="text" class="Query-Value" aria-describedby="basic-addon3">
+          <input placeholder="Value2" type="text" class="Query-Value2" aria-describedby="basic-addon3">
         </div>
         <div class="flex-item">
-          <input placeholder="Value" type="text" class="Query-Value" aria-describedby="basic-addon3">
+          <input placeholder="Value3" type="text" class="Query-Value3" aria-describedby="basic-addon3">
         </div>
       </div>
     </div>
 
-    <label for="basic-url">Headers</label>
     <div class="flex-container-3">
+      <label for="basic-url">Headers</label>
       <div class="Header-Key-Container">
         <div class="flex-item">
-          <input placeholder="Key" type="text" class="Header-Keys" aria-describedby="basic-addon3">
+          <input placeholder="Key1" type="text" class="Header-Keys1" aria-describedby="basic-addon3">
         </div>
         <div class="flex-item">
-          <input placeholder="Key" type="text" class="Header-Keys" aria-describedby="basic-addon3">
+          <input placeholder="Key2" type="text" class="Header-Keys2" aria-describedby="basic-addon3">
         </div>
         <div class="flex-item">
-          <input placeholder="Key" type="text" class="Header-Keys" aria-describedby="basic-addon3">
+          <input placeholder="Key3" type="text" class="Header-Keys3" aria-describedby="basic-addon3">
         </div>
       </div>
         <div class="header-value-container">
           <div class="flex-item">
-            <input placeholder="Value" type="text" class="Header-Values" aria-describedby="basic-addon3">
+            <input placeholder="Value1" type="text" class="Header-Values1" aria-describedby="basic-addon3">
           </div>
           <div class="flex-item">
-            <input placeholder="Value" type="text" class="Header-Values" aria-describedby="basic-addon3">
+            <input placeholder="Value2" type="text" class="Header-Values2" aria-describedby="basic-addon3">
           </div>
           <div class="flex-item">
-            <input placeholder="Value" type="text" class="Header-Values" aria-describedby="basic-addon3">
+            <input placeholder="Value3" type="text" class="Header-Values3" aria-describedby="basic-addon3">
           </div>
         </div>
       </div>
 
 
-      <label for="basic-url">Body</label>
       <div class="flex-container-4">
+        <label for="basic-url">Body</label>
         <div class="body-box">
-          <input class="body-box" name="request-body"/>
-        </div>
-      </div>
-      <div class="flex-container-5">
-        <div class="request-button">
-          <button id="req-button" type="submit" class="btn btn-default">Build Request</button>
-        </div>
-
-        <div class="response-button">
-          <button id="resp-button" type="submit" class="btn btn-default">Build and Send</button>
+          <textarea class="body-box" name="request-body"></textarea>
         </div>
       </div>
   </form>
-
-      <div class="Information-From-Server">
-        <div class="request-container">
-        <div class="Request">
-          Request
-        </div>
-        <div class="request-box">
-        </div>
-      </div>
-      <div class="response-container">
-        <div class="Response">
-          Response
-        </div>
-        <div class="response-box">
-        </div>
-      </div>
+  
+  <div class="flex-container-5">
+    <div class="request-button">
+      <button id="req-button" type="submit" class="btn btn-default">Build Request</button>
     </div>
+
+    <div class="response-button">
+      <button id="resp-button" type="submit" class="btn btn-default">Build and Send</button>
+    </div>
+  </div>
+
+
+  <div class="Information-From-Server">
+    <div class="Request">
+      Request
+    </div>
+    <div class="Response">
+      Response
+    </div>
+  </div>
+
+  <div class="outputs">
+    <form id="display-form">
+      <output class="request-box">
+      </output>
+      <output class="response-box">
+      </output>
+    </form>
+  </div>
+
+
     <script src="/javascripts/method.js"></script>
   </body>
 </html>

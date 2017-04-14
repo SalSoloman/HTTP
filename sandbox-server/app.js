@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-
+const logger = require('morgan')
 
 app.get('/', function(request, response) {
   response.status(200)
