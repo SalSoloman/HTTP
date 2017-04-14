@@ -16,6 +16,8 @@ body {
   margin-top: 35px;
   margin-left: 20px;
   background-color: #F0FFFF;
+  padding-left: 350px;
+  padding-right: 350px;
 }
 
 .flex-container-1 {
@@ -55,14 +57,19 @@ body {
   padding-top: 20px;
   float: right;
   display: flex;
+  padding-right: 380px;
 }
 
-.flex-item {
-  background-color: #F0F0F0;
+/*.flex-item {
+  background-color: #F0FFFF;
   color: black;
   border: 1px solid black;
   font-size: 14px;
-}
+}*/
+
+/*input {
+  margin-top: 4px;
+}*/
 
 textarea {
   width: 300px;
@@ -98,7 +105,7 @@ textarea {
 }
 
 .outputs {
-  height: 100px;
+  height: 250px;
 }
 
 
@@ -112,15 +119,6 @@ textarea {
   font-family: sans-serif;
 }
 
-#req-button {
-  background-color: #609732;
-  color: white;
-}
-
-#resp-button {
-  background-color: #29506D;
-  color: white;
-}
 
 
 .Response {
@@ -146,4 +144,15 @@ textarea {
 }
 
 .basic-url {
+}
+
+
+#req-button {
+  background-color: #609732;
+  color: white;
+}
+
+#resp-button {
+  background-color: #29506D;
+  color: white;
 }
